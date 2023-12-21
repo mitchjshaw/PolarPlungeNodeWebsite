@@ -9,20 +9,25 @@ const format = async () => {
   
     try {
       const response = await client.send(command);
-      // The Body object also has 'transformToByteArray' and 'transformToWebStream' methods.
       const str = await response.Body.transformToString();
       console.log(str);
+
+      var elements = str.split('|');
+
+      var data = {
+        page_1_link: elements[0],
+        page_2_link: elements[1],
+        page_3_link: elements[2],
+        page_4_link: elements[3],
+        page_5_link: elements[4],
+        page_6_link: elements[5],
+        page_title: markdown.toHTML(elements[6], "Maruku")
+      }
+
+      return data;
     } catch (err) {
       console.error(err);
     }
-    //   var elements = data.split('|');
-    //         document.getElementById('home-link').innerHTML = elements[0];
-    //         document.getElementById('info-link').innerHTML = elements[1];
-    //         document.getElementById('pub-link').innerHTML = elements[2];
-    //         document.getElementById('form-link').innerHTML = elements[3];
-    //         document.getElementById('prep-link').innerHTML = elements[4];
-    //         document.getElementById('ship-link').innerHTML = elements[5];
-    //         $('#title-div').append(markdown.toHTML(elements[6], "Maruku"));
   };
 
 export default format;
