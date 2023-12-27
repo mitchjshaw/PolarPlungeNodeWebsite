@@ -12,7 +12,6 @@ const index = async () => {
     try {
         const response = await client.send(command);
         const str = await response.Body.transformToString();
-        //console.log(str);
 
         var pre_limit = "PRE-CAROUSEL";
         var post_start = "POST-CAROUSEL";
@@ -42,13 +41,11 @@ const index = async () => {
             pre_carousel_text: pre_carousel_text,
             post_carousel_text: post_carousel_text
         };
-
-        console.log("DATA_INDEX: " + JSON.stringify(data));
-
+        
         return data;
     } catch (err) {
         console.error(err);
     }
-  };
+};
 
 export default index;

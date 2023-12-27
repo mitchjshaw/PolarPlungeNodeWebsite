@@ -12,7 +12,6 @@ const format = async () => {
     try {
 	    const response = await client.send(command);
 	    const str = await response.Body.transformToString();
-	    //console.log(str);
 
 	    var elements = str.split('|');
 
@@ -37,8 +36,6 @@ const format = async () => {
 		    page_6_link: elements[5],
 		    page_title: title_text
 	    };
-
-	    console.log("DATA_FORMAT: " + JSON.stringify(data));
 
 	    return data;
     } catch (err) {

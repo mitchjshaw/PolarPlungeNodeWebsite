@@ -1,8 +1,38 @@
-function info() {$(function () {
+import { GetObjectCommand, S3Client } from "@aws-sdk/client-s3";
+const client = new S3Client({region: 'us-east-1'});
 
-    $.get('./text/info.txt', function(data) {
-        $('#markdown-body').append(markdown.toHTML(data, "Maruku"));
-    }, 'text');
-});}
+import {markdown} from "markdown";
 
-module.exports = info;
+const info = async () => {
+    const command = new GetObjectCommand({
+        Bucket: "aohpolarplungebucket", 
+        Key: "info.txt"
+    });
+  
+    try {
+        const response = await client.send(command);
+        const str = await response.Body.transformToString();
+
+        var class_text = " class=\"body-text\"";
+        var regex = "(?<=<[^/]+)>";
+
+        var page_text = markdown.toHTML(str, "Maruku");
+
+        var insert_indeces = [...page_text.matchAll(new RegExp(search_text, 'gi'))].map(a => a.index);
+
+        for (let i = insert_indeces.length - 1; i > -1; i--)
+        {
+            page_text = page_text.substring(0, insert_indeces[i] + 2) + class_text + page_text.substring(insert_indeces[i] + 2);
+        }
+
+        var data = {
+            page_text: page_text
+        };
+        
+        return data;
+    } catch (err) {
+        console.error(err);
+    }
+};
+
+export default info;
