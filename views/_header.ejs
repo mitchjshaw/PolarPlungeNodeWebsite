@@ -14,30 +14,28 @@
         <div class="nav flex-column" id="nav-tabs" role="tablist">
           <image src="../images/logo/Logo.png" class="img-fluid"></image>
           <li class="nav-item text-end" role="presentation">
-            <a id="home-link" class="nav-link active fs-2" aria-controls="nav-home" href="/index.html"><%= page_1_link %></a>
+            <a id="home-link" class="nav-link active fs-2" aria-controls="nav-home" href="/index.html"><%- page_1_link %></a>
           </li>
           <li class="nav-item text-end" role="presentation">
-            <a id="info-link" class="nav-link fs-2" aria-controls="nav-info" href="/info.html"><%= page_2_link %></a>
+            <a id="info-link" class="nav-link fs-2" aria-controls="nav-info" href="/info.html"><%- page_2_link %></a>
           </li>
           <li class="nav-item text-end d-none" role="presentation">
-            <a id="pub-link" class="nav-link fs-4" aria-controls="nav-pub" href="/pub.html"><%= page_3_link %></a>
+            <a id="pub-link" class="nav-link fs-4" aria-controls="nav-pub" href="/pub.html"><%- page_3_link %></a>
           </li>
           <li class="nav-item text-end" role="presentation">
-            <a id="form-link" class="nav-link fs-2" aria-controls="nav-form" href="/form.html"><%= page_4_link %></a>
+            <a id="form-link" class="nav-link fs-2" aria-controls="nav-form" href="/form.html"><%- page_4_link %></a>
           </li>
           <li class="nav-item text-end" role="presentation">
-            <a id="prep-link" class="nav-link fs-2" aria-controls="nav-prep" href="/prep.html"><%= page_5_link %></a>
+            <a id="prep-link" class="nav-link fs-2" aria-controls="nav-prep" href="/prep.html"><%- page_5_link %></a>
           </li>          
           <li class="nav-item text-end d-none" role="presentation">
-            <a id="ship-link" class="nav-link fs-2" aria-controls="nav-ship" href="/sponsor.html"><%= page_6_link %></a>
+            <a id="ship-link" class="nav-link fs-2" aria-controls="nav-ship" href="/sponsor.html"><%- page_6_link %></a>
           </li>
         </div>
       </div>
       <div class="col">
         <div class="row">
-          <p id="title-div" class="title-text display-4 text-center">
-            <%= page_title %>
-          </p>
+          <%- page_title %>
         </div>
         <div class="row">
           <div class="col-2"></div>
