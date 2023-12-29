@@ -18,17 +18,19 @@ const info = async () => {
 
         var page_text = markdown.toHTML(str, "Maruku");
 
-        var insert_indeces = [...page_text.matchAll(new RegExp(search_text, 'gi'))].map(a => a.index);
+        var insert_indeces = [...page_text.matchAll(new RegExp(regex, 'gi'))].map(a => a.index);
 
         for (let i = insert_indeces.length - 1; i > -1; i--)
         {
-            page_text = page_text.substring(0, insert_indeces[i] + 2) + class_text + page_text.substring(insert_indeces[i] + 2);
+            page_text = page_text.substring(0, insert_indeces[i]) + class_text + page_text.substring(insert_indeces[i]);
         }
 
         var data = {
             page_text: page_text
         };
         
+        console.log(JSON.stringify(data));
+
         return data;
     } catch (err) {
         console.error(err);

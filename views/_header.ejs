@@ -9,36 +9,45 @@
   <div class="container-fluid main-div">
     <div class="row">
 
-      <div class="col-2 home-nav-panel">
-        <!-- "#7154a1" -->
-        <div class="nav flex-column" id="nav-tabs" role="tablist">
-          <image src="../images/logo/Logo.png" class="img-fluid"></image>
-          <li class="nav-item text-end" role="presentation">
-            <a id="home-link" class="nav-link active fs-2" aria-controls="nav-home" href="/index.html"><%- page_1_link %></a>
-          </li>
-          <li class="nav-item text-end" role="presentation">
-            <a id="info-link" class="nav-link fs-2" aria-controls="nav-info" href="/info"><%- page_2_link %></a>
-          </li>
-          <li class="nav-item text-end d-none" role="presentation">
-            <a id="pub-link" class="nav-link fs-4" aria-controls="nav-pub" href="/pub"><%- page_3_link %></a>
-          </li>
-          <li class="nav-item text-end" role="presentation">
-            <a id="form-link" class="nav-link fs-2" aria-controls="nav-form" href="/form"><%- page_4_link %></a>
-          </li>
-          <li class="nav-item text-end" role="presentation">
-            <a id="prep-link" class="nav-link fs-2" aria-controls="nav-prep" href="/prep"><%- page_5_link %></a>
-          </li>          
-          <li class="nav-item text-end d-none" role="presentation">
-            <a id="ship-link" class="nav-link fs-2" aria-controls="nav-ship" href="/sponsor"><%- page_6_link %></a>
-          </li>
+    <nav class="navbar fixed-top navbar-expand-lg home-nav-panel">
+      <div class="container-fluid">
+        <image src="../images/logo/Logo.png" class="img-fluid" style="min-width:10vh;width:15%;"></image>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item text-end" role="presentation">
+              <a id="home-link" class="nav-link active fs-2" aria-controls="nav-home" href="/"><%- page_1_link %></a>
+            </li>
+            <li class="nav-item text-end" role="presentation">
+              <a id="info-link" class="nav-link fs-2" aria-controls="nav-info" href="/info"><%- page_2_link %></a>
+            </li>
+            <li class="nav-item text-end d-none" role="presentation">
+              <a id="pub-link" class="nav-link fs-4" aria-controls="nav-pub" href="/pub"><%- page_3_link %></a>
+            </li>
+            <li class="nav-item text-end" role="presentation">
+              <a id="form-link" class="nav-link fs-2" aria-controls="nav-form" href="/form"><%- page_4_link %></a>
+            </li>
+            <li class="nav-item text-end" role="presentation">
+              <a id="prep-link" class="nav-link fs-2" aria-controls="nav-prep" href="/prep"><%- page_5_link %></a>
+            </li>          
+            <li class="nav-item text-end d-none" role="presentation">
+              <a id="ship-link" class="nav-link fs-2" aria-controls="nav-ship" href="/sponsor"><%- page_6_link %></a>
+            </li>
+          </ul>
         </div>
       </div>
-      <div class="col">
-        <div class="row">
-          <%- page_title %>
-        </div>
-        <div class="row">
-          <div class="col-2"></div>
-          <div class="col">
-            <div class="card">
-              <div class="card-body">
+    </nav>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-2 col-md-12" style="height:15vh;"></div>
+        <div class="col">
+          <div class="row">
+            <%- page_title %>
+          </div>
+          <div class="row">
+            <div class="col-2"></div>
+            <div class="col">
+              <div class="card">
+                <div class="card-body">
