@@ -20,7 +20,7 @@ import path from "path";
 //     }
 //   });
 
-import fromIni from "@aws-sdk/credential-providers";
+import {fromIni} from "@aws-sdk/credential-providers";
 
 import S3Client from "@aws-sdk/client-s3";
 
@@ -40,7 +40,7 @@ app.use('/public', publicStyle);
 app.use('/images', publicImages);
 app.use('/text', publicText);
 
-app.set("port", process.env.PORT || 3000);
+app.set("port", process.env.PORT || process.env.port || 3000);
 app.use(express.static('./public'));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -52,3 +52,5 @@ app.use(routes);
 app.listen(app.get("port"), function() {
     console.log("Server Started on Port: " + app.get("port"));
 });
+
+//export default app;
