@@ -8,7 +8,7 @@ import info from "./public/info.js";
 import prep from "./public/prep.js";
 
 router.get("/", async function(req, res, next) {
-    console.log("Start Page Routed");
+    console.log("Start Page Routed for user - " + req.socket.remoteAddress);
     var data_format = await format();
     var data_index = await index();
     var data = { 
@@ -22,7 +22,7 @@ router.get("/", async function(req, res, next) {
 });
 
 router.get("/info", async function(req, res, next) {
-    console.log("Info Page Routed");
+    console.log("Info Page Routed for user - " + req.socket.remoteAddress);
     var data_format = await format();
     var data_info = await info();
     var data = { 
@@ -36,7 +36,7 @@ router.get("/info", async function(req, res, next) {
 });
 
 router.get("/prep", async function(req, res, next) {
-    console.log("Prep Page Routed");
+    console.log("Prep Page Routed for user - " + req.socket.remoteAddress);
     var data_format = await format();
     var data_prep = await prep();
     var data = { 
@@ -50,7 +50,7 @@ router.get("/prep", async function(req, res, next) {
 });
 
 router.get("/form", async function(req, res, next) {
-    console.log("Form Page Routed");
+    console.log("Form Page Routed for user - " + req.socket.remoteAddress);
     var data_format = await format();
     var data = { 
     	...data_format, 

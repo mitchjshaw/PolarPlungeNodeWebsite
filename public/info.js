@@ -28,8 +28,6 @@ const info = async () => {
         var data = {
             page_text: page_text
         };
-        
-        console.log(JSON.stringify(data));
 
         return data;
     } catch (err) {
