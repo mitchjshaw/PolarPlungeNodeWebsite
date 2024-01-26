@@ -1,7 +1,7 @@
 .home-nav-panel {
   --bs-bg-opacity: 0.6;
   background-color: rgba(113, 84, 161, var(--bs-bg-opacity)) !important;
-  z-index: -0;
+  z-index: 1;
 }
 
 @media screen and (min-width: 992px) {
@@ -17,9 +17,16 @@
   }
 }
 
+@media screen and (max-width: 992px) {
+  .navbar-toggler {
+    background-color: rgba(255, 255, 255, 0.6) !important;
+  }
+}
+
 .card {
   --bs-bg-opacity: 0.6;
-  background-color: rgba(113, 84, 161, var(--bs-bg-opacity)) !important;
+  background-color: rgba(113, 84, 161, var(--bs-bg-opacity)) !important;'
+  z-index: -1;
 }
 
 .wrap {
@@ -84,6 +91,10 @@ body {
 
 .body-text {
   color: lightgrey !important;
+}
+
+.body-text-black {
+  color: black !important;
 }
 
 .carousel-item img {
