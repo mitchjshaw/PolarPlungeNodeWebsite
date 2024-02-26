@@ -1,2 +1,5 @@
 /node_modules
 /test.js
+daemon/aohpolarplungewebserver.exe
+daemon/aohpolarplungewebserver.exe.config
+daemon/aohpolarplungewebserver.xml

@@ -1,24 +1,5 @@
 import express from "express";
 import path from "path";
-//var AWS = require('aws-sdk');
-//var AWSCred;
-
-// AWS.config.getCredentials(function(err) {
-//     if (err) {
-//         console.log("Error Getting Local Credentials: " + err.stack);
-//     }
-//     else {
-//         AWSCred = new AWS.Credentials(AWS.config.credentials.accessKeyId, AWS.config.credentials.secretAccessKey)
-//         AWSCred.get(function(err) {
-//             if (err) {
-//                 console.log("Error Getting AWS Credentials: " + err.stack);
-//             }
-//             else {
-//                 console.log("SESSION TOKEN: " + AWS.config.credentials.sessionToken);
-//             }
-//         });
-//     }
-//   });
 
 import {fromIni} from "@aws-sdk/credential-providers";
 
